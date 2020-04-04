@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dea6b03-86c6-4c2e-8681-e167fecbff17" name="Default Changelist" comment="" />
+    <list default="true" id="9dea6b03-86c6-4c2e-8681-e167fecbff17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/user/random-series.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/search-results.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/user-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/user-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/user-dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/user-dashboard.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/user/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/user/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +23,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -117,6 +131,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1a2NSCC7qm6ajIHNTvR1P7Sz56L" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -129,11 +144,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\show-tv\resources\views\admin-panel\episodes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\show-tv\resources\views\layouts\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\show-tv\resources\views\admin-panel\episodes" />
     </key>
   </component>
   <component name="RunManager">
@@ -174,7 +189,11 @@
       <workItem from="1586008839868" duration="1911000" />
       <workItem from="1586015283865" duration="2062000" />
       <workItem from="1586021621780" duration="726000" />
-      <workItem from="1586024362372" duration="1140000" />
+      <workItem from="1586024362372" duration="1806000" />
+      <workItem from="1586026208949" duration="1773000" />
+      <workItem from="1586028096597" duration="1722000" />
+      <workItem from="1586029927849" duration="1787000" />
+      <workItem from="1586031776322" duration="962000" />
     </task>
     <servers />
   </component>
@@ -186,18 +205,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586010130056" />
+    <state x="405" y="191" key="EditFileWatcherDialog" timestamp="1586026087448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="405" y="191" key="EditFileWatcherDialog/0.0.1536.824@0.0.1536.824" timestamp="1586026087448" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1586016636250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586016636250" />
-    <state x="465" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1586024455335">
+    <state x="465" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1586031777670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586024455335" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586024823837">
+    <state x="465" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586031777670" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586027598978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586024823837" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586027598978" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

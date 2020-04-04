@@ -19,9 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 //admin routes
-Route::group(['prefix'=>'/dashboard/admin-panel','middleware' =>['auth','admin']],function () {
+Route::group(['prefix'=>'/dashboard/admin-panel','middleware' =>['auth']],function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('series', 'SeriesController');
     Route::resource('episodes', 'EpisodeController');
@@ -30,7 +29,9 @@ Route::group(['prefix'=>'/dashboard/admin-panel','middleware' =>['auth','admin']
 
 //user routes
 Route::group(['prefix'=>'/user','middleware' =>['auth']],function () {
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('user-home');
+    Route::get('/search','HomeController@search');
+    Route::get('/random-series','HomeController@random_series');
     Route::get('/series/{id}', 'SeriesController@view');
     Route::resource('episodes', 'EpisodeController');
     Route::resource('users','UserController')->only('index');

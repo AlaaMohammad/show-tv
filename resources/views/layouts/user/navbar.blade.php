@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-trans shadow-sm">
-    <div class="container">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark shadow-sm">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Show') }}
         </a>
@@ -8,13 +8,19 @@
                 aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('user-home') }}">{{ __('Home') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/random-series">Random Series</a>
+                </li>
             </ul>
-
+            <form method="GET" action="/user/search" class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2 w-auto" type="text" name="q" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
@@ -50,5 +56,5 @@
                 @endguest
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
