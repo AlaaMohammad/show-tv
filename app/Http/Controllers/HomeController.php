@@ -56,6 +56,8 @@ class HomeController extends Controller
     public function random_series()
     {
         $random_series = Series::all()->random(5);
+       // dd($random_series);
         return view('user.random-series', compact('random_series'));
     }
 }
+
