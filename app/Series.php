@@ -18,7 +18,8 @@ class Series extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function episode(){
+    public function episodes()
+    {
         return $this->hasMany('App\Episode');
     }
 }

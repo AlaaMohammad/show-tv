@@ -31,8 +31,8 @@ Route::group(['prefix' => '/dashboard/admin-panel', 'middleware' => ['auth', 'ad
 Route::group(['prefix'=>'/user','middleware' =>['auth']],function () {
     Route::get('/home', 'HomeController@index')->name('user-home');
     Route::get('/search','HomeController@search');
-    Route::get('/random-series','HomeController@random_series');
-    Route::get('/series/{id}', 'SeriesController@view');
+    Route::get('/random-series', 'HomeController@random_series');
+    Route::get('view/series/{id}', 'SeriesController@view');
     Route::resource('episodes', 'EpisodeController');
     Route::resource('users','UserController')->only('index');
 });
