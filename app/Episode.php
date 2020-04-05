@@ -24,6 +24,11 @@ class Episode extends Model
         return $this->belongsTo('App\Series');
     }
 
+    /**
+     * episode liked by user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function liked_by(){
         return $this->belongsToMany('App\User','episode_user_likes');
     }

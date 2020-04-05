@@ -33,6 +33,8 @@ Route::group(['prefix'=>'/user','middleware' =>['auth']],function () {
     Route::get('/search','HomeController@search');
     Route::get('/random-series', 'HomeController@random_series');
     Route::get('view/series/{id}', 'SeriesController@view');
-    Route::resource('episodes', 'EpisodeController');
-    Route::resource('users','UserController')->only('index');
+    Route::get('/episode/{id}/like','UserController@like');
+    Route::get('/episode/{id}/dislike','UserController@dislike');
+    Route::get('/series/{id}/follow','UserController@follow');
+    Route::get('/series/{id}/unfollow','UserController@unfollow');
 });

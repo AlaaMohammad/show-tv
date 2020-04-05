@@ -54,10 +54,41 @@ class User extends Authenticatable
     }
 
     /**
+     * series follows
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function follow_series(){
+        return $this->belongsToMany('App\Series','series_user_follows');
+    }
+
+    /**
      * check if the logged user is admin
      * @return mixed
      */
     public function isAdmin() {
         return $this->role()->where('role', 'admin')->exists();
     }
+
+    /**
+     * check if the user like a specific episode
+     * @param $episode_id
+     * @return bool
+     */
+    public function is_liked($episode_id){
+        return $this->like_episode()->where('episode_id',$episode_id)->exists();
+
+    }
+
+    /**
+     * check if user follow a specific series
+     * @param $series_id
+     * @return bool
+     */
+    public function is_followed($series_id){
+        return $this->follow_series()->where('series_id',$series_id)->exists();
+    }
+
+
 }
+

@@ -22,4 +22,8 @@ class Series extends Model
     {
         return $this->hasMany('App\Episode');
     }
+
+    public function followed_by(){
+        return $this->belongsToMany('App\User','series_user_follows');
+    }
 }

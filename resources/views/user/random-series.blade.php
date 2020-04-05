@@ -14,6 +14,11 @@
                                 <h5 class="card-title"><a href="/user/view/series/{{$item->id}}">{{$item->title}}</a>
                                 </h5>
                                 <p class="card-text">{{$item->description}}</p>
+                                @if(auth()->user()->is_followed($item->id))
+                                    <a href="/user/series/{{$item->id}}/unfollow" class="btn btn-primary">Unfollow</a>
+                                @else
+                                    <a href="/user/series/{{$item->id}}/follow" class="btn btn-primary">Follow</a>
+                                @endif
                             </div>
                         </div>
                     </div>

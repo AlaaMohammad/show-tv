@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEpisodeUserLikesTable extends Migration
+class CreateSeriesUserFollows extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateEpisodeUserLikesTable extends Migration
      */
     public function up()
     {
-        Schema::create('episode_user_likes', function (Blueprint $table) {
+        Schema::create('series_user_follows', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->unsignedBigInteger('episode_id');
-            $table->foreign('episode_id')->references('id')->on('episodes');
+            $table->unsignedBigInteger('series_id');
+            $table->foreign('series_id')->references('id')->on('series');
 
         });
     }
@@ -30,6 +30,6 @@ class CreateEpisodeUserLikesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('episode_user_likes');
+        Schema::dropIfExists('series_user_follows');
     }
 }
