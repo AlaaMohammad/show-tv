@@ -20,11 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 //admin routes
-Route::group(['prefix'=>'/dashboard/admin-panel','middleware' =>['auth']],function () {
+Route::group(['prefix' => '/dashboard/admin-panel', 'middleware' => ['auth', 'admin']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('series', 'SeriesController');
     Route::resource('episodes', 'EpisodeController');
-    Route::resource('users','UserController')->only('index');
+    Route::resource('users', 'UserController')->only('index');
 });
 
 //user routes

@@ -45,6 +45,15 @@ class User extends Authenticatable
     }
 
     /**
+     * episode likes
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function like_episode(){
+        return $this->belongsToMany('App\Episode','episode_user_likes');
+    }
+
+    /**
      * check if the logged user is admin
      * @return mixed
      */

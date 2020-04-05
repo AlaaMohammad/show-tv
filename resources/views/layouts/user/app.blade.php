@@ -15,6 +15,7 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/9c78f9a948.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
@@ -24,7 +25,7 @@
 <body>
 <div id="app">
     @include('layouts.user.navbar')
-    <main class="">
+    <main class="mt-5 pt-5" style="margin-top: 7rem !important">
         @yield('content')
     </main>
 </div>

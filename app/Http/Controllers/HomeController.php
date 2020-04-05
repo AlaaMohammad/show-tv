@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Episode;
 use App\Series;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
@@ -25,14 +27,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(auth()->user()->role->role == 'admin'){
+            return view('admin-panel.home');
+        }
+        $latest_episodes = Episode::latest('id')->take(10)->get();
+        return view('user.home',compact('latest_episodes'));
     }
 
     /**
-     * search result
+     * search results
      *
      * @param Request $request
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function search(Request $request)
     {
@@ -43,8 +49,13 @@ class HomeController extends Controller
 
     }
 
-    public function random_series(){
+    /**
+     * generate random series
+     * @return Factory|View
+     */
+    public function random_series()
+    {
         $random_series = Series::all()->random(5);
-        return view('user.random-series',compact('random_series'));
+        return view('user.random-series', compact('random_series'));
     }
 }

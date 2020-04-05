@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +21,7 @@ class UserController extends Controller
     {
         // list all episodes foe all series
         $users = User::all();
-        return view('admin-panel.users.index',compact('users'));
+        return view('admin-panel.users.index', compact('users'));
 
     }
 }

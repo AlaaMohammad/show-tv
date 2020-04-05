@@ -23,4 +23,8 @@ class Episode extends Model
     public function series(){
         return $this->belongsTo('App\Series');
     }
+
+    public function liked_by(){
+        return $this->belongsToMany('App\User','episode_user_likes');
+    }
 }
