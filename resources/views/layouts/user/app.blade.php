@@ -25,7 +25,7 @@
 <body>
 <div id="app">
     @include('layouts.user.navbar')
-    <main class="mt-5 pt-5" style="margin-top: 7rem !important">
+    <main class="mt-5 pt-5">
         @yield('content')
     </main>
 </div>
