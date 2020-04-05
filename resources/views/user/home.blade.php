@@ -1,8 +1,8 @@
 @extends('layouts.user.app')
 @section('content')
     <div class="container-fluid">
+        <h3> Latest Episodes</h3>
         @foreach($latest_episodes->chunk(4) as $episodes)
-
         <div class="row mb-5">
             @foreach($episodes as $episode)
                 <div class="col-md-3">
@@ -11,12 +11,10 @@
                         <video class="card-img-top" playsinline autoplay muted loop>
                             <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4">
                         </video>
-                        <img class="card-img-top" src="..." alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">{{$episode->title}}</h5>
+                            <p class="card-text">{{$episode->description}}</p>
+                            <a href="#" class="btn btn-primary">like</a>
                         </div>
                     </div>
                     {{--
