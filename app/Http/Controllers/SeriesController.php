@@ -126,6 +126,8 @@ class SeriesController extends Controller
     {
 
         $series = Series::findOrFail($id);
+        $test = $series->episodes()->get();
+        dd($test);
         return view('user.series.view', compact('series'));
 
     }

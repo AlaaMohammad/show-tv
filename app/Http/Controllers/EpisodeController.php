@@ -51,7 +51,7 @@ class EpisodeController extends Controller
             'airing_time_day' => $request->input('airing_time_day'),
             'airing_time_hour'=> $request->input('airing_time_hour'),
             'thumbnail' =>$request->input('thumbnail'),
-            'video_asset' => $request
+            //'video_asset' => $request
         ]);
     }
 
